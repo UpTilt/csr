@@ -1,0 +1,81 @@
+@import "../_vendor/bourbon/bourbon"
+@import "../_vendor/uptilt/uptilt"
+
+$csr-base-color: #607D8B
+$csr-highlight-color: #FF8C00
+
+$csr-color-call: #2DCC70
+$csr-color-res: #3498DB
+$csr-color-esc: #CC3333
+$csr-color-fu: #FF8D37
+$csr-color-box: #FF8A80
+$csr-color-email: #AE7AC4
+
+body
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/concrete_seamless.png")
+
+.button
+  +ut-button-setup()
+
+.hover-visible
+  visibility: visible !important
+  opacity: 1 !important
+.click-visible
+  visibility: visible !important
+  opacity: 1 !important
+.visible
+  visibility: visible !important
+  opacity: 1 !important
+
+.main-content-container
+  margin: 0 auto
+  max-width: 70em
+  padding: 0 0.5em
+
+// Imports
+@import "partials/user_header"
+@import "partials/main_buttons"
+@import "partials/metrics/_root"
+@import "partials/metrics/detail"
+@import "partials/metrics/main"
+
+@lost gutter 0.5em
+
+// Modals
+#modal-notes,
+#modal-suggestions,
+#modal-change-password
+  +ut-modal(#607d8b, center)
+  color: rgba(255,255,255, 0.8)
+  input,
+  textarea
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+  .button-notes-submit,
+  .button-suggestions-submit,
+  .button-password-submit
+    +ut-button-shape(square)
+    +ut-button-style(flat, #FF8C00)
+    +ut-button-size(small)
+    margin-bottom: 1.5em
+    width: 100%
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    &:active
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+// /modals
+.ut-modal-inner::-webkit-scrollbar
+  display: none
+.input-group
+  select
+    margin-bottom: 1em
+
+.so-entry
+  background: white
+  padding: 0.5em
+  border-radius: 2px
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+  margin-bottom: 1.5em
+  input
+    margin-bottom: 0
+    border-radius: 0
+////

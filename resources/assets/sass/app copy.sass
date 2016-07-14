@@ -1,0 +1,379 @@
+@import "../_vendor/bourbon/bourbon"
+@import "../_vendor/uptilt/uptilt"
+
+//@lost gutter 0.5em
+
+$ut-color-aqua: $ut-color-blue
+$ut-color-blue: #CC3333
+$ut-color-green: #FF8D37
+$ut-color-purple: #2DCC70
+//$ut-color-aqua: #06AEED
+$ut-color-orange: #FF8A80
+$ut-color-pink: #AE7AC4
+
+
+$csr-color-call: #2DCC70
+$csr-color-res: #3498DB
+$csr-color-esc: #CC3333
+$csr-color-fu: #FF8D37
+$csr-color-box: #FF8A80
+$csr-color-email: #AE7AC4
+
+
+body
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/concrete_seamless.png")
+
+header
+  lost-utility: clearfix
+  background: #607d8b
+  color: white
+  width: 100%
+  padding: 0.5em
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  .hours-wrap
+    display: inline-block
+  #update-hours
+    margin-left: 0.5em
+    &:hover
+      cursor: pointer
+  .header-item
+    text-align: center
+    flex-grow: 1
+    display: inline-block
+    font-weight: bold
+    font-size: 1.15em
+  .cog-full
+    margin-right: 1em
+    cursor: pointer
+  .cog-mobile
+    display: none
+    background-color: rgba(0, 0, 0, 0.2)
+    //margin: 1em -0.5em -0.5em
+    font-weight: bold
+    cursor: pointer
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.26)
+  .goals-wrap
+    position: relative
+    .graph-wrap
+      position: absolute
+      bottom: -2px
+      left: 50%
+      transform: translateX(-50%)
+      width: 50%
+      height: 3px
+      background-color: white
+      .graph
+        position: absolute
+        top: 0
+        left: 0
+        height: 3px
+        background-color: #FF8C00
+
+@media (max-width: 500px)
+  header
+    display: block
+    text-align: center
+    .header-item
+      display: block
+      margin-bottom: 0.5em
+    #gs-logo
+      display: inline-block
+      //float: left
+      width: 40%
+    .cog-full
+      display: none
+
+  .metrics
+    margin: 3em 0 1.5em !important
+
+  .sub-header
+    width: 100% !important
+    background-color: #455A64 !important
+    .cog-mobile
+      display: block !important
+    .header-settings
+      box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.26) !important
+      background-color: rgba(0, 0, 0, 0.2)
+
+
+// Test Area
+.sub-header
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26), inset 0 2px 5px rgba(0, 0, 0, 0.26)
+  background-color: #455A64
+  position: absolute
+  right: 0
+  z-index: 1
+  width: 20em
+  .cog-mobile
+    text-align: center
+    display: none
+    color: white
+    font-weight: bold
+    cursor: pointer
+  .header-settings
+    lost-utility: clearfix
+    display: none
+    color: white
+    padding: 1em
+    text-align: center
+    margin: 0
+    //background-color: rgba(0, 0, 0, 0.2)
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26)
+    h4
+      color: white
+      display: inline-block
+      margin-bottom:
+      //margin-bottom: 0
+    span
+      display: inline-block
+      width: 50%
+      max-width: 5em
+      font-size: 1.25em
+      //text-align: right
+    .hours-worked-box
+      border: 1px solid $ut-color-light-gray
+      text-align: center
+
+.button-suggestions
+  +ut-button-setup
+  +ut-button-shape(square)
+  +ut-button-style(line, #FF8C00)
+  +ut-button-size(small)
+  display: block
+  lost-column: 1/1
+  @media (max-width: 500px)
+    lost-column: 1/2
+  margin-bottom: 1.5em
+.header-button-wrap
+  lost-utility: clearfix
+.button-hours-worked
+  display: inline-block
+  //width: auto
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+  color: white
+.button-update-hours
+  +ut-button-setup
+  +ut-button-shape(square)
+  +ut-button-style(line, #FF8C00)
+  +ut-button-size(small)
+  width: 50%
+  margin-top: 1.5em
+// Test area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button
+  +ut-button-setup()
+
+.hover-visible
+  visibility: visible !important
+  opacity: 1 !important
+.click-visible
+  visibility: visible !important
+  opacity: 1 !important
+.visible
+  visibility: visible !important
+  opacity: 1 !important
+
+.root-body
+  margin: 0 auto
+  max-width: 70em
+  padding: 0 0.5em
+
+.metrics
+  lost-utility: clearfix
+  margin: 1.5em 0
+  border-radius: 2px
+  height: 30em
+  .right-side
+    lost-column: 3/4 0
+    background: white
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+    height: 100%
+    padding: 0.5em
+    //border: 1px solid $ut-color-light-gray
+    @media (max-width: 1200px)
+      lost-column: 1/1 0
+
+.right-side
+  position: relative
+  overflow: hidden
+  .slide-container
+    position: absolute
+    top: 0
+    left: 0
+    width: 200%
+    height: 100%
+    .left-slide
+      position: absolute
+      top: 0%
+      left: 0%
+      bottom: 0%
+      width: 50%
+      overflow-y: scroll
+      //background: yellow
+    .right-slide
+      position: absolute
+      top: 0%
+      left: 100%
+      width: 50%
+      background: tomato
+
+@import "partials/main_buttons"
+
+.metrics-detail
+  lost-column: 1/4 0
+  background: white
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.26), inset  0 -8px 8px -8px rgba(0,0,0,0.5), inset  0  8px 8px -8px rgba(0,0,0,0.5)
+  height: 100%
+  padding: 0.5em
+  font-size: 0.75em
+  overflow-y: scroll
+  @media (max-width: 1200px)
+    display: none
+  &::-webkit-scrollbar
+    display: none
+  .metrics-cat
+    width: 100%
+    display: inline-block
+    margin: 0 auto 0.75em auto
+    text-align: left
+  .cat-header
+    font-size: 1.15em
+    font-weight: bold
+    text-align: center
+    width: 100%
+    display: inline-block
+    
+.metrics-cat
+  .entry-wrap
+    position: relative
+    display: block
+    width: 100%
+    &:after
+      content: "\00a0" // To prevent collapsing div
+    .entry-label
+      position: absolute
+      width: 50%
+      top: 0
+      left: 0
+      text-align: right
+      padding-right: 0.5em
+      margin-left: -1.15em
+      border-right: 1px solid lightgray
+    .graph-wrap
+      position: absolute
+      width: 45%
+      height: 1.5em
+      top: 0
+      right: 0.25em
+      .number
+        position: absolute
+        left: -1.75em
+        width: 1.15em
+        text-align: right
+      .graph-bar
+        width: 50%
+        transition: width ease 0.5s
+        height: 35%
+        //background: black
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 2px
+
+// Cat Colors
+#metrics-cat-call
+  .graph-bar
+    background: $csr-color-call
+#metrics-cat-res
+  .graph-bar
+    background: $csr-color-res
+#metrics-cat-esc
+  .graph-bar
+    background: $csr-color-esc
+#metrics-cat-fu
+  .graph-bar
+    background: $csr-color-fu
+#metrics-cat-box
+  .graph-bar
+    background: $csr-color-box
+#metrics-cat-email
+  .graph-bar
+    background: $csr-color-email
+
+.left-slide
+  padding: 0.5em
+  text-align: center
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.26), inset  0 -8px 8px -8px rgba(0,0,0,0.5), inset  0  8px 8px -8px rgba(0,0,0,0.5)
+  &::-webkit-scrollbar
+    display: none
+  .table-name
+    text-align: center
+    display: inline-block
+    margin: auto
+    margin-bottom: 0.75em
+    border-bottom: 1px solid $ut-color-light-gray
+  input
+    display: inline-block
+    margin: 0.5em 1em
+    max-width: 20em
+    text-align: center
+    height: 1.5em
+  select
+    margin: 0.5em 1em
+    display: inline-block
+    width: 100%
+    max-width: 20em
+  .search-sep
+    max-width: 40em
+    margin: 0.75em auto
+    border-bottom: 1px solid $ut-color-light-gray
+
+  table
+    th
+      text-align: center
+    text-align: center
+    tr
+      transition: background-color ease 0.5s, color ease 0.5s
+    &:hover
+      cursor: pointer
+      //background-color: rgba(224, 133, 133, 0.8)
+.table-headers
+  position: sticky
+  top: 0
+
+.so-entry
+  background: white
+  padding: 0.5em
+  border-radius: 2px
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+  margin-bottom: 1.5em
+  input
+    margin-bottom: 0
+    border-radius: 0
+////

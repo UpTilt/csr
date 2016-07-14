@@ -1,0 +1,109 @@
+// Main Button Controls
+.main-buttons
+  margin-bottom: 1.5em
+  text-align: center
+  lost-utility: clearfix
+  .button-wrapper
+    position: relative
+    overfow: hidden
+    display: inline-block
+    z-index: 3
+    margin: 0.5em 0
+    lost-column: 1/6 0
+    @media (max-width: 1200px)
+      lost-column: 1/3 3
+    @media (max-width: 800px)
+      lost-column: 1/2 2
+
+  button
+    +ut-button-size(medium)
+    @media(max-width: 1200px)
+      +ut-button-size(large)
+    width: 100%
+    padding: 1em 1em
+    margin: 0
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    &:active
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+  // Categories
+  // Escalations
+  .button-esc-root
+    +ut-button-style(flat, $csr-color-esc)
+    +ut-button-shape(rounded)
+  .button-esc-sub
+    +ut-button-style(flat, $csr-color-esc)
+    +ut-button-shape(rounded)
+  // Follow Ups
+  .button-fu-root
+    +ut-button-style(flat, $csr-color-fu)
+    +ut-button-shape(rounded)
+  .button-fu-sub
+    +ut-button-style(flat, $csr-color-fu)
+    +ut-button-shape(rounded)
+  // Calls
+  .button-call-root
+    +ut-button-style(flat, $csr-color-call)
+    +ut-button-shape(rounded)
+  .button-call-sub
+    +ut-button-style(flat, $csr-color-call)
+    +ut-button-shape(rounded)
+  // Research
+  .button-res-root
+    +ut-button-style(flat, $csr-color-res)
+    +ut-button-shape(rounded)
+  .button-res-sub
+    +ut-button-style(flat, $csr-color-res)
+    +ut-button-shape(rounded)
+  // Box Kits
+  .button-box-root
+    +ut-button-style(flat, $csr-color-box)
+    +ut-button-shape(rounded)
+  .button-box-sub
+    +ut-button-style(flat, $csr-color-box)
+    +ut-button-shape(rounded)
+  // Email
+  .button-email-root
+    +ut-button-style(flat, $csr-color-email)
+    +ut-button-shape(rounded)
+  .button-email-sub
+    +ut-button-style(flat, $csr-color-email)
+    +ut-button-shape(rounded)
+
+  // Popup window that displays the rest of the buttons
+  .popup
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    top: 1px
+    width: 100%
+    transform: translateY(-100%)
+    transition: opacity ease 0.5s, visibility ease 0.5s
+    padding: 0.5em
+    padding-bottom: 2em
+    button
+      margin: 0.5em 0
+  // Escalations
+  .bw-esc
+    .popup
+      background: rgba(tint($csr-color-esc, 40%), 0.8)
+  // Follow-ups
+  .bw-fu
+    .popup
+      background: rgba(tint($csr-color-fu, 40%), 0.8)
+  // Calls
+  .bw-call
+    .popup
+      background: rgba(tint($csr-color-call, 40%), 0.8)
+  // Research
+  .bw-res
+    .popup
+      background: rgba(tint($csr-color-res, 40%), 0.8)
+  // Box Kits
+  .bw-box
+    .popup
+      background: rgba(tint($csr-color-box, 40%), 0.8)
+  // Email
+  .bw-email
+    .popup
+      background: rgba(tint($csr-color-email, 40%), 0.8)
